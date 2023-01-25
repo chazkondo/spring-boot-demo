@@ -5,13 +5,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.stereotype.*;
 
+
+import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.Map;
 
 @Controller
 @SpringBootApplication
 public class CircleApplication {
-
+	@CrossOrigin(origins = "*", allowedHeaders = "*")
 	@RequestMapping("/api")
 	@ResponseBody
 	public Map<String, String> home() {
